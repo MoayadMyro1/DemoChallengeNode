@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EJS</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+       
+            <a href="/AddArticle"> Add new article </a>
+            
+
+        <div class="data">
+        <% if(result) { %>
+            <h1 class="result"> <%= result %> </h1>
+        <% } %>
+        
+          <% if(alltitles.length > 0) { 
+                alltitles.forEach( article => { %>
+                 <a herf="/ViewAtrical" class="titlelink" ><%= article.title %> </a>
+                <p><%= article.article %></p>
+                <% }) %>
+                 
+            <% } else { %>
+                <h3 class="err"> No articles found </h3>
+            <% } %>
+            </div>
+        
+    </body>
+</html>
