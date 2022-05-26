@@ -8,8 +8,8 @@ app.use(express.urlencoded({extended: false}))
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.json());
-app.get('/AddArticle', (req, res) => { res.render('AddArticle') })
-app.get('/EditArticle', (req, res) => { res.render('EditArticle') })
+
+app.get('/AddArticle', (req, res) => { res.render('AddArticle', { formError: ''}) })
 
 app.use(router);
 

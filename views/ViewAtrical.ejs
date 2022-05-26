@@ -4,13 +4,28 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>EJS</title>
+        <title>View Articles</title>
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
        
-            <h1> Timeline </h1>
+            <a href="/"> Back </a>
 
-       
+       <div class="data">
+        
+          <% if(title) {  %>
+               
+                <h2><%= title.title %></h2>
+              
+                <p><%= title.article %></p>
+            <% } else { %>
+                <h3 class="err"> No articles found </h3>
+            <% } %>
+              <a href="/EditArticle/?title_id=<%= title._id %>"> Edit  article </a>
+              <form onsubmit="return confirm('Are you sure?');" class="rightform" action="/delete-article?title_id=<%= title._id %>" method="POST">
+                <button>Delete article</button>
+               </form>
+         
+            </div>
     </body>
 </html>

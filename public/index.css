@@ -53,3 +53,27 @@ h2, h5 {
     font-weight:700;
     cursor:pointer;
 }
+.Header {
+    width:100%;
+}
+    .Header h2 {
+        display:inline-block;
+    }
+    .Header a {
+        float: right;
+        margin-top:10px;
+    }
+.rightform {
+    display: inline-block;
+    float: right;
+    margin-right: 40%;
+}
+    .rightform button {
+        display: inline-block;
+        border: none;
+        background-color: #fff;
+        color: -webkit-link;
+        cursor: pointer;
+        text-decoration: underline;
+        float: right;
+    }

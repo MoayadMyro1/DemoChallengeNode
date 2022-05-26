@@ -8,18 +8,15 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-       
-            <a href="/AddArticle"> Add new article </a>
-            
+       <div class="Header">
+          <h2>New York Times</h2>  <a href="/AddArticle"> Add new article </a>
+            </div>
 
         <div class="data">
-        <% if(result) { %>
-            <h1 class="result"> <%= result %> </h1>
-        <% } %>
         
           <% if(alltitles.length > 0) { 
                 alltitles.forEach( article => { %>
-                 <a herf="/ViewAtrical" class="titlelink" ><%= article.title %> </a>
+                 <a href="/ViewAtrical/?title_id=<%= article._id %>" class="titlelink" ><%= article.title %> </a>
                 <p><%= article.article %></p>
                 <% }) %>
                  
